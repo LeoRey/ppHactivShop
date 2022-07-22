@@ -48,8 +48,7 @@ function addToCartClick(event){
     var shopItem = button.parentElement.parentElement
     var name = shopItem.getElementsByClassName('item-name')[0].innerText
     var price = shopItem.getElementsByClassName('item-price')[0].innerText
-    var stock = shopItem.getElementsByClassName('item-stock')[0].innerText
-    addItemToCart(name,price,stock)
+    addItemToCart(name,price)
 }
 
 function addItemToCart(name,price,stock){

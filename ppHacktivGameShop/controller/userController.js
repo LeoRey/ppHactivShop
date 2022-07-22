@@ -8,6 +8,11 @@ class userController{
 
     static postRegister(req,res){
         const {username,email,password} = req.body
+        // const check = User.findOne({username})
+        // if(check){
+        //     res.send("Username Taken!")
+        //     return 
+        // }
         User.create({username,email,password})
             .then(newUser =>{
                 res.redirect('/login')

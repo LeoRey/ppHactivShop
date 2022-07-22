@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     hooks:{
       beforeCreate: function (User){
         User.isAdmin = false
+        User.isLogin = false
         const salt = bycrypt.genSaltSync(5);
         User.password = bycrypt.hashSync(User.password,salt)
       }

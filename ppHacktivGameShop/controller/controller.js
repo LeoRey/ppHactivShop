@@ -3,7 +3,7 @@ const { Op } = require("sequelize")
 
 class controller{
     static mainpg(req,res){
-        Item.findAll({where : {availability : {[Op.eq] : true}}})
+        Item.findAll({where : {availability : {[Op.eq] : true}},order : [['CategoryId', 'ASC']]})
         .then(result =>{
             res.render('home.ejs',{result})
         })
@@ -30,11 +30,10 @@ class controller{
         const {name,price,stock,CategoryId} = req.body
         Item.create({name,price,stock,CategoryId})
             .then(newItem =>{
-                console.log("Success")
                 res.redirect('/adminHome')
             })
             .catch((err)=>{
-                console.log("error")
+                console.log(err)
                 res.send(err)
             })
     }
