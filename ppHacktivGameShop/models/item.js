@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       beforeCreate: function (Item){
         if(Item.stock > 0){
-          Items.availability = true
+          Item.availability = true
         }else{
           Item.availability = false
         }
