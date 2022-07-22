@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Hacktiv Game Shop</title>
+    <h1>Hacktiv Game Shop</h1>
+
+
+</head>
+
+<body>
+  <!-- your content here... -->
+  <table>
+    <thead>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Category</th>
+        <th>Action</th>
+
+    </thead>
+    <tbody>
+        <% result.forEach((el) =>{%>
+            <tr class="item-list">
+                    <td class="item-name"><%= el.name %></td>
+                    <td class="item-price"><%= el.price %> </td>
+                    <td class="item-stock"><%= el.stock %></td>
+                    <td class="item-category"><%= el.CategoryId %> </td>
+                    <td><button class="addToCart">Add</button></td>
+                
+            </tr>
+        <% }) %> 
+
+    </tbody>
+</table>
+
+<section class="cart">
+    <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                <span class="cart-stock cart-header cart-column">STOCK</span>
+            </div>
+            <div class="cart-items">
+            </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <input type="text" class="cart-total-price" value="0" readonly></span>
+                </div>
+                <button class="purchase-btn" type="button">Purchase</button>
+</section>
+  <script type="text/javascript" src="js/setup.js"></script>
+</body>
+</html>
