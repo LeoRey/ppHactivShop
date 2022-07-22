@@ -13,7 +13,7 @@ class controller{
     }
 
     static adminMain(req,res){
-        Item.findAll()
+        Item.findAll({ order : [['CategoryId', 'ASC']] })
         .then(result =>{
             res.render('adminHome.ejs',{result})
         })
