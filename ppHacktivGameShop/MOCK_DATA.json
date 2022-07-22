@@ -1,0 +1,5 @@
+[{"name":"Voucher 20k","price":21000,"stock":45,"availability":true,"CategoryId":1},
+{"name":"Voucher 50k","price":50000,"stock":34,"availability":true,"CategoryId":1},
+{"name":"Gold Atlantica 1 M","price":2000,"stock":19,"availability":true,"CategoryId":2},
+{"name":"Akun Genshin starter","price":45000,"stock":99,"availability":true,"CategoryId":3},
+{"name":"Akun FGO starter","price":45000,"stock":0,"availability":false,"CategoryId":3}]
